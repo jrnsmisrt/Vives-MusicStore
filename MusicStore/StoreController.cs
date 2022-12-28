@@ -3,6 +3,7 @@ using MusicStore.ViewModels;
 
 namespace MusicStore
 {
+
     public class StoreController : Controller
     {
         public IActionResult Index()
@@ -12,9 +13,10 @@ namespace MusicStore
 
             // Create our view model
             var viewModel = new StoreIndexVM { 
-                NumberOfGenres= genres.Count(),
+                NumberOfGenres = genres.Count(),
                 Genres = genres };
-            return View();
+
+            return View(viewModel);
         }
     }
 }
