@@ -20,7 +20,7 @@ app.UseStaticFiles();
 app.MapControllerRoute(
     name: "default_route",
     pattern: "{controller}/{action}/{id?}",
-    defaults: new { controller = "Home", action = "Index" });
+    defaults: new { controller = "Store", action = "Index" });
 
 app.UseRouting();
 
