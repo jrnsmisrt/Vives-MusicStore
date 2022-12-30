@@ -23,9 +23,18 @@
                asp-route-genre="@genre">
                     @genre
                 </a>
+                @if (ViewBag.Starred.Contains(genre))
+                {
+                    <img height="25" width="25" src="~/images/starred.png" alt="stars" />
+                }
             </li>
         }
 
     </ul>
+
+    <h5>
+        <img height="25" width="25" src="~/images/starred.png" alt="Starred element" />Starred genres 20%
+        Off!
+    </h5>
 </body>
 </html>

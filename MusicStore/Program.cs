@@ -17,15 +17,16 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.MapControllerRoute(
-    name: "default_route",
-    pattern: "{controller}/{action}/{id?}",
-    defaults: new { controller = "Store", action = "Index" });
 
 app.UseRouting();
 
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+app.MapControllerRoute(
+    name: "default_route",
+    pattern: "{controller}/{action}/{id?}",
+    defaults: new { controller = "Store", action = "Index" });
 
 app.Run();

@@ -18,8 +18,11 @@ namespace MusicStore
                 Genres = genres
             };
 
+            ViewBag.Starred = new List<string> { "Rock", "Jazz" };
+
             return View(viewModel);
         }
+
         [Route("/Browse")]
         public IActionResult Browse(string genre)
         {
