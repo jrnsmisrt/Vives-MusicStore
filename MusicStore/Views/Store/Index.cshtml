@@ -19,17 +19,17 @@
         {
             <li>
                 <a asp-controller="Store"
-               asp-action="Browse"
-               asp-route-genre="@genre">
+                   asp-action="Browse"
+                   asp-route-genre="@genre">
                     @genre
                 </a>
+
                 @if (ViewBag.Starred.Contains(genre))
                 {
                     <img height="25" width="25" src="~/images/starred.png" alt="stars" />
                 }
             </li>
         }
-
     </ul>
 
     <h5>
